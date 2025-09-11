@@ -1,0 +1,16 @@
+
+<div class="header">
+        To-do List
+</div>
+
+<div>
+        <input [(ngModel)]="newTask" placeholder="Enter the New task" >
+        <button (click)="addTodo()" class="addButton">Add</button> 
+    <ul>
+  <li *ngFor="let todo of todos">
+    <input type="checkbox" [checked]="todo.completed" (change)="toggleComplete(todo)" />
+    <span [ngClass]="{ 'completed': todo.completed }">{{ todo.task }}</span>
+    <button (click)="deleteTodo(todo._id)">Delete</button>
+  </li>
+</ul>
+</div>
