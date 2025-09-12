@@ -7,14 +7,13 @@
   background: #f9fafb;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
 }
 
-div{
-   
-    .addButton {
-        margin: 1.2rem;
-    }
+div {
+  .addButton {
+    margin: 1.2rem;
+  }
 }
 
 .completed {
@@ -31,10 +30,9 @@ li {
   gap: 10px;
 }
 
-.header{
-    font-weight:bold;
-    font-size: large;
-    display: flex;
-    text-align: center;
+.header {
+  font-weight: bold;
+  font-size: large;
+  display: flex;
+  text-align: center;
 }
-

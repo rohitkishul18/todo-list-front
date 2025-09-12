@@ -1,0 +1,13 @@
+<div class="register-container">
+        <h2>sign Up</h2>
+
+        <form (ngSubmit)="registerUser()">
+                <input [(ngModel)]="name" name="name"  placeholder="Enter your name">
+                <input [(ngModel)]="email"  name="email" placeholder="enter your email">
+                <input [(ngModel)]="mobile" name="mobile"  placeholder="enter your mobile">
+                <input [(ngModel)]="password" name="password" type="password"       placeholder="enter your password">
+                <button>Login in</button>
+        </form>
+            <p *ngIf="error" style="color:red">{{error}}</p>
+
+</div>

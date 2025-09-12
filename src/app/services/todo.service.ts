@@ -23,4 +23,10 @@ export class TodoService {
   deleteTodo(id: string): Observable<any> {
     return this.http.delete(`${this.apiUrl}/${id}`);
   }
+
+  deleteAlltodolist():Observable<any>{
+    return this.http.delete(`${this.apiUrl}`)
+  }
+
+
 }
