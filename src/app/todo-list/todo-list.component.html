@@ -4,11 +4,15 @@
   <input [(ngModel)]="newTask" placeholder="Enter the New task" />
   <button (click)="addTodo()" class="addButton">Add</button>
   <button (click)="deleteAlltodolist()" *ngIf="isShowbutton">Delete All Todo list</button>
+   <div *ngIf="!hasAccess && todos.length >= maxFreeTasks" style="margin-top:10px;">
+    <p>You’ve reached the free limit (5 tasks).</p>
+    <button (click)="goToStripe()" class="btn btn-primary">Subscribe to Continue</button>
+  </div>
   <ul>
     <li *ngFor="let todo of todos">
       <input
         type="checkbox"
-        [checked]="todo.completed"
+        [checked]="todo.completed"  
         (change)="toggleComplete(todo)"
       />
       <span [ngClass]="{ completed: todo.completed }">{{ todo.task }}</span>
